@@ -41,7 +41,15 @@ namespace _22_writing_and_reading_from_files
             foreach (string line in fileContentByLine)
             {
                 Console.WriteLine(line);
-            }
+            } 
+
+            Score[]  highScore = new Score[5];
+            highScore[0] = new Score("Arjan de Ruijter", 1250);
+            highScore[1] = new Score("Johan de Vriesch", 1450);
+            highScore[2] = new Score("Bert de Beer", 1150);
+            highScore[3] = new Score("Jan van Straten", 1950);
+            highScore[4] = new Score("Rudolph de Groot", 1750);
+
 
             Console.ReadLine();
         }
