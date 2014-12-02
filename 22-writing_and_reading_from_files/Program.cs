@@ -51,6 +51,7 @@ namespace _22_writing_and_reading_from_files
             highScore[4] = new Score("Rudolph de Groot", 1750);
 
 
+
             Console.ReadLine();
         }
     }
