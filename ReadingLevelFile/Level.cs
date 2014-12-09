@@ -9,7 +9,7 @@ namespace ReadingLevelFile
     public class Level
     {
         //Fields
-        private string[] levelText = new string[20];
+        //private string[] levelText = new string[20];
 
         private List<string> stringList = new List<string>();
 
@@ -20,6 +20,7 @@ namespace ReadingLevelFile
         public Level()
         {
             this.ReadLevelFromText();
+            this.CountNumberOneAndZero();
         }
 
 
@@ -60,10 +61,36 @@ namespace ReadingLevelFile
             }
 
             Console.WriteLine("Er zijn {0} regels text in de List: stringList", this.stringList.Count);
-
-
+            
             fileStream.Close();
             reader.Close();
+        }
+
+        private void CountNumberOneAndZero()
+        {
+            int numberOnes = 0;
+            int numberZeros = 0;
+            
+            foreach (string lineInList in this.stringList)
+            {
+                for (int i = 0; i < lineInList.Length; i++)
+                {
+                    if (lineInList[i] == '1')
+                    {
+                        numberOnes++;
+                    }
+                    else if (lineInList[i] == '0')
+                    {
+                        numberZeros++;
+                    }
+                    else
+                    {
+
+                    }
+                }
+            }
+
+            Console.WriteLine("Het aantal enen bedraagt: {0} en het aantal nullen bedraagt {1}", numberOnes, numberZeros);
         }
     }
 }
