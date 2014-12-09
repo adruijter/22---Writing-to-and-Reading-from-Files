@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "22-writing_and_reading_from_files", "22-writing_and_reading_from_files\22-writing_and_reading_from_files.csproj", "{8F62F848-9E17-4411-A59E-5A46824FE62B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingLevelFile", "ReadingLevelFile\ReadingLevelFile.csproj", "{376D64D0-4065-4198-B9D1-2BED6453DE3E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{8F62F848-9E17-4411-A59E-5A46824FE62B}.Debug|x86.Build.0 = Debug|x86
 		{8F62F848-9E17-4411-A59E-5A46824FE62B}.Release|x86.ActiveCfg = Release|x86
 		{8F62F848-9E17-4411-A59E-5A46824FE62B}.Release|x86.Build.0 = Release|x86
+		{376D64D0-4065-4198-B9D1-2BED6453DE3E}.Debug|x86.ActiveCfg = Debug|x86
+		{376D64D0-4065-4198-B9D1-2BED6453DE3E}.Debug|x86.Build.0 = Debug|x86
+		{376D64D0-4065-4198-B9D1-2BED6453DE3E}.Release|x86.ActiveCfg = Release|x86
+		{376D64D0-4065-4198-B9D1-2BED6453DE3E}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,6 @@
+﻿Maak een Level class
+Maak een private method die alle enen en nullen in een Array zet
+Laat de constructor van deze Level class deze method aanroepen.
+Maak een method die telt hoeveel enen er in het bestand zitten.
+Maak een method die telt hoeveel nullen er in het bestand zitten.
+Maak gebruik van een fileStream en StreamReader object.

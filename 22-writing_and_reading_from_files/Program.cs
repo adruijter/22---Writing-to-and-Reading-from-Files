@@ -50,7 +50,14 @@ namespace _22_writing_and_reading_from_files
             highScore[3] = new Score("Jan van Straten", 1950);
             highScore[4] = new Score("Rudolph de Groot", 1750);
 
+            string text = "";
+            foreach (Score score in highScore)
+            {
+                text += score.Name + " , " + score.Scores + "\n";
 
+            }
+
+            File.WriteAllText(@"C:\Users\Arjan de Ruijter\Desktop\highscore.csv", text);
 
             Console.ReadLine();
         }

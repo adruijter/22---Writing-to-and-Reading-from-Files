@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8F62F848-9E17-4411-A59E-5A46824FE62B}</ProjectGuid>
+    <ProjectGuid>{376D64D0-4065-4198-B9D1-2BED6453DE3E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_22_writing_and_reading_from_files</RootNamespace>
-    <AssemblyName>22-writing_and_reading_from_files</AssemblyName>
+    <RootNamespace>ReadingLevelFile</RootNamespace>
+    <AssemblyName>ReadingLevelFile</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -43,9 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Level.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Score.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="level-0.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Opdracht.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

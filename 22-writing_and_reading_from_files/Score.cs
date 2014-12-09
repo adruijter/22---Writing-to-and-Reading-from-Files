@@ -13,7 +13,11 @@ namespace _22_writing_and_reading_from_files
 
 
         //Properties Name, Score
-        public int Score { get; set; }
+        public int Scores
+        { 
+            get { return this.score; }
+            set { this.score = value;}        
+        }
         public string Name
         {
             get { return this.name; }
