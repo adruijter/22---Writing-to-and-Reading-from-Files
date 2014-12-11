@@ -83,14 +83,12 @@ namespace ReadingLevelFile
                     {
                         numberZeros++;
                     }
-                    else
-                    {
-
-                    }
+                    else {}
                 }
             }
 
-            Console.WriteLine("Het aantal enen bedraagt: {0} en het aantal nullen bedraagt {1}", numberOnes, numberZeros);
+            Console.WriteLine("Het aantal enen bedraagt: {0} en het aantal nullen bedraagt {1}",
+                                numberOnes, numberZeros);
         }
     }
 }

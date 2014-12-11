@@ -1,0 +1,10 @@
+﻿1. Maak een public method ChangeOneToZeroAndZeroToOne() in de class Level
+2. Deze method verandert de enen naar nullen en de nullen naar enen
+3. Dit alles wordt bewaard in een nieuwe list die als veld is toegevoegd aan de class
+   Precies in het midden (bij 20 regels begint de tekst dan bij regel 10, bij een regelbreedte
+   van 20 begint de tekst bij na het 17de character) de enen en nullen moet de tekst komen:
+   Arjan (eigen naam gebruiken)
+   was
+   here (onder elkaar)
+4. Schrijf de inhoud van de nieuwe list naar een nieuw tekstbestand.
+5. Schrijf de inhoud van de nieuwe list naar de console.
