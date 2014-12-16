@@ -15,6 +15,10 @@ namespace ReadingLevelFile
 
         private List<string> zeroToOneAndOneToZero = new List<string>();
 
+        private List<string> result = new List<string>();
+
+
+
         //Properties
 
 
@@ -123,8 +127,27 @@ namespace ReadingLevelFile
                         stringTemp += '0';
                     }
                 }
-                Console.WriteLine(stringTemp);
+                this.result.Add(stringTemp);
             }
+
+            foreach (string stringLine in this.result)
+            {
+                Console.WriteLine(stringLine);
+            }
+
+            fileStream.Close();
+            textReader.Close();
+
+            fileStream = File.OpenWrite(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\result.txt");
+            TextWriter textWriter = new StreamWriter(fileStream);
+
+            foreach (string stringLine in this.result)
+            {
+                textWriter.WriteLine(stringLine);
+            }
+            Console.WriteLine("De inhoud van de List<string> result is wegschreven naar result.txt");
+            textWriter.Flush();
+            textWriter.Close();
             
             /*
             string testString = "Arjan de Ruijter"; // Een string is een array die char's bevat
