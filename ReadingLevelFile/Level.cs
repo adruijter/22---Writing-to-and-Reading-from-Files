@@ -101,23 +101,31 @@ namespace ReadingLevelFile
 
         private void ChangeOneToZeroAndZeroToOne()
         {
+            // Maak een handvat aan het te lezen tekstbestand
             FileStream fileStream = File.OpenRead(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\toets.txt");
 
             TextReader textReader = new StreamReader(fileStream);
 
+            // Lees de eerste regel in van het tekstbestand
             string line = textReader.ReadLine();
 
+            // Lees de rest van de regels uit het tekstbestand
             while (line != null)
             {
+                // Doe iedere regel in de List
                 this.zeroToOneAndOneToZero.Add(line);
+                // Lees een nieuwe regel in.
                 line = textReader.ReadLine();
             }
             
             foreach (string stringLine in this.zeroToOneAndOneToZero)
             {
                 string stringTemp = "";
+                
+                // Beschouw iedere string uit de List<string> als een array van characters
                 foreach (char number in stringLine)
                 {
+                    
                     if (number == '0')
                     {
                         stringTemp += '1';
@@ -127,25 +135,31 @@ namespace ReadingLevelFile
                         stringTemp += '0';
                     }
                 }
+                // Stop de omgedraaide waarde in de List<string> result
                 this.result.Add(stringTemp);
             }
 
+            // Schrijf de inhoud van de List<string> result naar de console
             foreach (string stringLine in this.result)
             {
                 Console.WriteLine(stringLine);
             }
 
+            // Sluit het fileStream en textReader object
             fileStream.Close();
             textReader.Close();
 
+            // Maak een handvat naar het bestand result.txt om naar te schrijven
             fileStream = File.OpenWrite(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\result.txt");
             TextWriter textWriter = new StreamWriter(fileStream);
 
+            // Schrijf iedere string uit de List<string> result naar het tekstbestand result.txt
             foreach (string stringLine in this.result)
             {
                 textWriter.WriteLine(stringLine);
             }
             Console.WriteLine("De inhoud van de List<string> result is wegschreven naar result.txt");
+            // Leeg en sluit het textwriter object.
             textWriter.Flush();
             textWriter.Close();
             
