@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Opdracht.txt" />
+    <None Include="toets.txt" />
     <None Include="Opdracht2.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

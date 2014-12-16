@@ -13,14 +13,18 @@ namespace ReadingLevelFile
 
         private List<string> stringList = new List<string>();
 
+        private List<string> zeroToOneAndOneToZero = new List<string>();
+
         //Properties
 
 
         //Constructor
         public Level()
         {
-            this.ReadLevelFromText();
-            this.CountNumberOneAndZero();
+            //this.ReadLevelFromText();
+            //this.CountNumberOneAndZero();
+            this.ChangeOneToZeroAndZeroToOne();
+            
         }
 
 
@@ -90,5 +94,21 @@ namespace ReadingLevelFile
             Console.WriteLine("Het aantal enen bedraagt: {0} en het aantal nullen bedraagt {1}",
                                 numberOnes, numberZeros);
         }
+
+        private void ChangeOneToZeroAndZeroToOne()
+        {
+            FileStream fileStream = File.OpenRead(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\toets.txt");
+
+            TextReader textReader = new StreamReader(fileStream);
+
+            string line = textReader.ReadLine();
+
+            while (line != null)
+            {
+                this.zeroToOneAndOneToZero.Add(line);
+                line = textReader.ReadLine();
+            }
+        
+        }        
     }
 }

@@ -1,10 +1,60 @@
 ﻿1. Maak een public method ChangeOneToZeroAndZeroToOne() in de class Level
 2. Deze method verandert de enen naar nullen en de nullen naar enen
 3. Dit alles wordt bewaard in een nieuwe list die als veld is toegevoegd aan de class
-   Precies in het midden (bij 20 regels begint de tekst dan bij regel 10, bij een regelbreedte
-   van 20 begint de tekst bij na het 17de character) de enen en nullen moet de tekst komen:
+4. Precies in het midden (bij 20 regels begint de tekst dan bij regel 10, bij een regelbreedte
+   van 20 begint de tekst bij na het 17de character) moet de tekst komen:
    Arjan (eigen naam gebruiken)
    was
    here (onder elkaar)
-4. Schrijf de inhoud van de nieuwe list naar een nieuw tekstbestand.
-5. Schrijf de inhoud van de nieuwe list naar de console.
+5. Schrijf de inhoud van de nieuwe list naar een nieuw tekstbestand.
+6. Schrijf de inhoud van de nieuwe list naar de console.
+
+
+this.ChangeOneToZeroAndZeroToOne();
+ private List<string> zeroToOneAndZeroToOne = new List<string>();
+
+public void ChangeOneToZeroAndZeroToOne()
+        {
+            FileStream fileStream = File.OpenRead(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\toets.txt");
+
+            TextReader reader = new StreamReader(fileStream);
+
+            // Lees de text van toets.txt in
+            string line = reader.ReadLine();
+
+            while (line != null)
+            {
+                string newLine = "";
+                foreach (char number in line)
+                {
+                    if (number == '0')
+                    {
+                        newLine += '1';
+                    }
+                    else if (number == '1')
+                    {
+                        newLine += '0';
+                    }
+                }
+                this.zeroToOneAndZeroToOne.Add(newLine);
+                line = reader.ReadLine();
+            }
+
+            foreach (string stringline in this.zeroToOneAndZeroToOne)
+            {
+                Console.WriteLine(stringline);
+            }
+
+            fileStream.Close();
+            reader.Close();
+
+            fileStream = File.OpenWrite(@"C:\Users\Arjan de Ruijter\Documents\Visual Studio 2010\Projects\2014-2015\22-writing_and_reading_from_files\ReadingLevelFile\toets1.txt");
+
+            TextWriter textWriter = new StreamWriter(fileStream);
+
+            foreach (string stringLine in this.zeroToOneAndZeroToOne)
+            {
+                textWriter.WriteLine(stringLine);
+                textWriter.Flush();
+            }        
+        }
