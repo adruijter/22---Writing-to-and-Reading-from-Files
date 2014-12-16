@@ -108,7 +108,32 @@ namespace ReadingLevelFile
                 this.zeroToOneAndOneToZero.Add(line);
                 line = textReader.ReadLine();
             }
-        
+            
+            foreach (string stringLine in this.zeroToOneAndOneToZero)
+            {
+                string stringTemp = "";
+                foreach (char number in stringLine)
+                {
+                    if (number == '0')
+                    {
+                        stringTemp += '1';
+                    }
+                    else if (number == '1')
+                    {
+                        stringTemp += '0';
+                    }
+                }
+                Console.WriteLine(stringTemp);
+            }
+            
+            /*
+            string testString = "Arjan de Ruijter"; // Een string is een array die char's bevat
+
+            foreach (char letter in testString)
+            {
+                Console.WriteLine(letter);
+            }
+            */
         }        
     }
 }
